@@ -1,0 +1,390 @@
+		button, input, a {
+			outline: 0 !important;
+		}
+
+		.polaroid {
+			background: white;
+			padding: 1rem;
+			box-shadow: 0 0.2rem 1.2rem rgba(0,0,0,0.2);
+			margin-left: auto;
+    		margin-right: auto;
+    		text-align: center;
+			border: 2px solid black;
+			height: 100%;
+    		width: 100%;
+    		position: relative;
+		}
+
+		.signin {
+			height: 300px;
+    		width: 300px;
+    		margin-bottom: 10px;
+    		object-fit: cover;
+    		border: 2px solid black;
+    		font-family: 'brusherregular';
+			font-size: 3rem;
+			text-align: center;
+			line-height: 6.5em;
+			color: darkgreen;
+		}
+
+		.showcasing {
+			font-family: monospace;
+    		letter-spacing: 3px;
+    		font-size: 1rem;
+    		text-align: center;
+    		line-height: 0.2em;
+    		color: saddlebrown;
+		}
+
+		.caption {
+			font-family: 'impact_labelregular';
+			font-size: 1.5rem;
+			text-align: center;
+			line-height: 2em;
+			color: darkgreen;
+		}
+
+		.item .polaroid:before{
+			content: '';
+			position: absolute;
+			z-index: -1;
+			transition: all 0.35s;
+		}
+
+		.one{
+			transform: scale(0.8,0.8) rotate(5deg);
+			transition: all 0.35s;
+			position: relative;
+			z-index: 1;
+		}
+
+		.one .polaroid:before{
+			transform: rotate(5deg);
+			height: 20%;
+			width: 47%;
+			bottom: 30px;
+			right: 17px;
+			box-shadow: 0 2.1rem 2rem rgba(0,0,0,0.4);
+		}
+
+		.two{
+			transform: scale(0.8,0.8) rotate(-5deg);
+			transition: all 0.35s;
+			position: relative;
+			z-index: 1;
+		}
+
+		.two .polaroid:before{
+			transform: rotate(-5deg);
+			height: 20%;
+			width: 47%;
+			bottom: 30px;
+			right: 18px;
+			box-shadow: 0 2.1rem 2rem rgba(0,0,0,0.4);
+		}
+
+		.item:nth-child(1):hover {
+			filter: none;
+			transform: scale(1,1) rotate(0deg) !important;
+			transition: all 0.35s;
+			margin-bottom: 10px;
+			z-index: 2;
+		}
+
+		.item:nth-child(1):hover .polaroid:before{
+			content: '';
+			position: absolute;
+			z-index: -1;
+			transform: rotate(0deg);
+			height: 90%;
+			width: 90%;
+			bottom: 0%;
+			right: 5%;
+			box-shadow: 0 1rem 3rem rgba(0,0,0,0.2);
+			transition: all 0.35s;
+		}
+
+		@keyframes shake {
+			0% {
+				transform: rotate(2deg);
+			}
+
+			50% {
+				transform: rotate(-2deg);
+			}			
+
+			100% {
+				transform: rotate(2deg);
+			}
+		}
+
+		@keyframes shiver {
+			0% {
+				transform: translateY(20px);
+			}
+
+			100% {
+				transform: translateY(-20px);
+			}
+		}
+
+		.signup-form {
+			display: none;
+			animation: 1s shiver ease;
+		}
+
+		.login-form {
+			display: none;
+			animation: 1s shiver ease;
+		}
+
+		.divider-text {
+    position: relative;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.divider-text span {
+    padding: 7px;
+    font-size: 12px;
+    position: relative;   
+    z-index: 2;
+}
+.divider-text:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    top: 55%;
+    left: 0;
+    z-index: 1;
+}
+
+.btn-block {
+	background-color: darkgreen;
+    color: #fff;
+    font-family: 'Handlee', cursive;
+    border-radius: 0;
+    border: 1px solid black;
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.2);	
+}
+
+.btn-block:hover {
+	background-color: darkgreen;
+    color: #fff;
+    animation: 1s shake ease;
+    border: 1px solid black;    
+}
+
+.btn-facebook {
+    background-color: #405D9D;
+}
+.btn-google {
+    background-color: #DD4B39;
+}
+
+.fa-google {
+	border: 1px solid white;
+    border-radius: 100%;
+    padding: 7px;
+}
+
+.fa-facebook-f {
+	border: 1px solid white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    line-height: 15px;
+    padding: 7px;
+}
+
+.card {
+	border: 0;
+    border-radius: 0;
+}
+
+.card-body {
+	background: white;
+}
+
+.text-center {
+	    color: saddlebrown;
+    font-family: monospace;
+    font-size: 1.3em;
+}
+
+.or-sep {
+	    color: black;
+    font-family: 'Londrina Outline', cursive;
+   		background: white !important;
+   		font-weight: bold;
+    font-size: 30px;
+    text-align: center;	
+}
+
+.input-group-text {
+	border-radius: 0;
+    background: white;
+    border: 1px solid black;
+    color: black;
+}
+
+.form-control {
+	border-radius: 0;
+    background: white;
+    border: 1px solid black;
+    font-family: monospace;
+    font-size: 1em;
+}
+
+.custom-select {
+	border-radius: 0;
+    background: white;
+    border: 1px solid black;
+    font-family: monospace;
+    font-size: 1em;	
+}
+
+.form-group {
+        box-shadow: 3px 3px 3px rgba(0,0,0,0.2);	
+}
+
+.container {
+	max-width: 960px;
+}
+
+.ad-divide {
+	overflow: hidden;
+    border-style: inset;
+    border-width: 1px;
+    margin-top: 30px;
+}
+
+.left-border {
+
+}
+
+.left-border img {
+	height: 200px;
+    transform: rotate(-60deg);
+}
+
+.right-border {
+
+}
+
+.right-border img:nth-child(1) {
+	height: 200px;
+    transform: rotate(-20deg);	
+}
+
+.right-border img:nth-child(2) {
+	height: 200px;
+    margin-left: -180px;
+    transform: rotate(20deg);
+}
+
+.invalid-feedback {
+    font-family: monospace;
+    font-size: 1em;
+    letter-spacing: 2px;
+    color: saddlebrown;  
+}
+
+.others {
+	justify-content: center;
+    height: 450px;
+}
+
+.item {
+	display: inline-block;
+    margin-top: 2rem;
+    height: 400px;
+	width: 335px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto
+}
+
+.signing {
+	z-index: 1;
+	right: 500px;
+}
+
+.logging {
+	z-index: 2;
+
+}
+
+.nothing {
+	z-index: 3;
+	left: 500px;
+}
+
+@media screen and (max-width: 836px) { 
+		.item-hldr {
+			width: 100%;
+			display: grid;
+		}
+		.item {
+			position: relative;
+			left: 0;
+			right: 0;
+			margin: auto;	
+		}
+
+		.others {
+			display: block;
+			height: auto;
+		}
+	}
+
+	.lead {
+    font-family: monospace;
+        letter-spacing: 3px;
+        font-size: 1rem;
+        color: saddlebrown; 
+  }
+
+  .chk-out-hdr {
+          color: black;
+    font-family: 'Londrina Outline', cursive;
+   		background: white !important;
+   		font-weight: bold;
+    font-size: 3rem;
+  }
+
+  .top-header {
+    position: sticky;
+    padding: 0 0;
+    pointer-events: none;
+    background: white;
+    border-bottom: 1px solid black;
+	}
+
+	.top-logo {
+			pointer-events: all;
+			font-family: 'Londrina Outline', cursive;
+			color: black;
+			font-weight: bold;
+			font-size: 2rem;
+    		margin-left: auto;
+    		left: 0;
+    		margin-right: auto;
+    		top: 0;
+		}
+
+		.top-logo:hover {
+			font-size: 3.2rem;
+			color: black;
+		}
+
+		.logo-fun {
+
+		}
+
+		.logo-kadaa {
+
+		}

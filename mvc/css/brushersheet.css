@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'brusherregular';
+    src: url('Brusher-Regular.ttf') format('truetype'),
+         url('Brusher-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+
+}
